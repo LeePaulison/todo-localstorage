@@ -13,7 +13,6 @@ import { ToDo } from "./pages/projects/todo";
 import { Create } from "./components/todo/create";
 import { Edit } from "./components/todo/edit";
 import { ToDoItem } from "./components/todo/todoItem";
-import { VideoPlayer } from "./pages/projects/videoplayer";
 
 import { allToDoLoader, todoLoader } from "./loaders/loaders";
 import { createToDoAction, updateToDoAction, deleteToDoAction } from "./actions/actions";
@@ -27,20 +26,6 @@ const router = createBrowserRouter([
       crumbs: () => "Home",
     },
     children: [
-      {
-        path: "/about",
-        element: <About />,
-        handle: {
-          crumbs: () => "About",
-        },
-      },
-      {
-        path: "/contact",
-        element: <Contact />,
-        handle: {
-          crumbs: () => "Contact",
-        },
-      },
       {
         path: "/todolist",
         element: <ToDo />,
@@ -76,13 +61,6 @@ const router = createBrowserRouter([
           },
           { path: "/todolist/:todoId/destroy", action: deleteToDoAction },
         ],
-      },
-      {
-        path: "/videoplayer",
-        element: <VideoPlayer />,
-        handle: {
-          crumbs: () => "Video Player",
-        },
       },
     ],
   },

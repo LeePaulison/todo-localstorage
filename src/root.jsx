@@ -17,15 +17,6 @@ export const Root = () => {
             <NavLink className='font-lg font-bold' to='/todolist'>
               To Do List
             </NavLink>
-            <NavLink className='font-lg font-bold' to='/videoplayer'>
-              Video Player
-            </NavLink>
-            <NavLink className='font-bold' to='/about'>
-              About
-            </NavLink>
-            <NavLink className='font-bold' to='/contact'>
-              Contact
-            </NavLink>
           </div>
         </div>
       </header>
