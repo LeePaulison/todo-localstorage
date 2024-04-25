@@ -7,17 +7,17 @@ export async function createToDoAction({ request }) {
   const formData = await request.formData();
   const content = Object.fromEntries(formData);
   const todo = await createToDo(content);
-  return redirect(`/todolist/${todo.id}`);
+  return redirect(`/${todo.id}`);
 }
 
 export async function updateToDoAction({ params, request }) {
   const formData = await request.formData();
   const updates = Object.fromEntries(formData);
   await updateToDo(params.todoId, updates);
-  return redirect(`/todolist`);
+  return redirect(`/`);
 }
 
 export async function deleteToDoAction({ params }) {
   await deleteToDo(params.todoId);
-  return redirect(`/todolist`);
+  return redirect(`/`);
 }

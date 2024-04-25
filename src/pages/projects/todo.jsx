@@ -4,7 +4,7 @@ import { ToDoList } from "../../components/todo/todoList";
 import { Navigation } from "../../components/navigation";
 
 const NewToDo = () => (
-  <NavLink className='nav-link' to={`/todolist/create`}>
+  <NavLink className='nav-link' to={`/create`}>
     New ToDo
   </NavLink>
 );
@@ -19,7 +19,7 @@ export const ToDo = () => {
     return arr.map((todo) => {
       if (todo.title !== "") {
         return (
-          <NavLink key={todo.id} to={`/todolist/${todo.id}`} className='nav-link'>
+          <NavLink key={todo.id} to={`/${todo.id}`} className='nav-link'>
             {todo.title}
           </NavLink>
         );

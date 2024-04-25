@@ -5,10 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // css
 import "./index.css";
 // components
-import { Root } from "./root";
 import { ErrorPage } from "./errorpage";
-import { About } from "./pages/about";
-import { Contact } from "./pages/contact";
 import { ToDo } from "./pages/projects/todo";
 import { Create } from "./components/todo/create";
 import { Edit } from "./components/todo/edit";
@@ -20,48 +17,39 @@ import { createToDoAction, updateToDoAction, deleteToDoAction } from "./actions/
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root />,
+    element: <ToDo />,
     errorElement: <ErrorPage />,
+    loader: allToDoLoader,
     handle: {
-      crumbs: () => "Home",
+      crumbs: () => "To Do List",
     },
     children: [
       {
-        path: "/todolist",
-        element: <ToDo />,
+        path: "/create",
+        element: <Create />,
         handle: {
-          crumbs: () => "To Do List",
+          crumbs: () => "Create ToDo",
         },
-        loader: allToDoLoader,
-        children: [
-          {
-            path: "/todolist/create",
-            element: <Create />,
-            handle: {
-              crumbs: () => "Create ToDo",
-            },
-            action: createToDoAction,
-          },
-          {
-            path: "/todolist/:todoId/edit",
-            element: <Edit />,
-            handle: {
-              crumbs: () => "Edit ToDo",
-            },
-            action: updateToDoAction,
-            loader: todoLoader,
-          },
-          {
-            path: "/todolist/:todoId",
-            element: <ToDoItem />,
-            handle: {
-              crumbs: () => `ToDo Item`,
-            },
-            loader: todoLoader,
-          },
-          { path: "/todolist/:todoId/destroy", action: deleteToDoAction },
-        ],
+        action: createToDoAction,
       },
+      {
+        path: "/:todoId/edit",
+        element: <Edit />,
+        handle: {
+          crumbs: () => "Edit ToDo",
+        },
+        action: updateToDoAction,
+        loader: todoLoader,
+      },
+      {
+        path: "/:todoId",
+        element: <ToDoItem />,
+        handle: {
+          crumbs: () => `ToDo Item`,
+        },
+        loader: todoLoader,
+      },
+      { path: "/:todoId/destroy", action: deleteToDoAction },
     ],
   },
 ]);
