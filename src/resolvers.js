@@ -11,7 +11,7 @@ function set(list) {
 export async function getAllTodos(query = "") {
   let list = await localforage.getItem("list");
 
-  if (query !== "") {
+  if (query !== null) {
     list = matchSorter(list, query, { keys: ["title"] });
   }
   return list?.sort(sortBy("createdAt")) || [];
@@ -35,7 +35,9 @@ export async function createToDo(content) {
   };
   Object.assign(todo, content);
   let list = (await localforage.getItem("list")) || [];
+
   list.unshift(todo);
+
   await set(list);
   return todo;
 }

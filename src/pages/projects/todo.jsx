@@ -1,4 +1,5 @@
-import { Outlet, useLoaderData, NavLink } from "react-router-dom";
+import { useEffect } from "react";
+import { Outlet, useLoaderData, NavLink, Form, useSubmit } from "react-router-dom";
 // components
 import { ToDoList } from "../../components/todo/todoList";
 import { Navigation } from "../../components/navigation";
@@ -9,7 +10,12 @@ const NewToDo = () => (
   </NavLink>
 );
 export const ToDo = () => {
-  const { list } = useLoaderData();
+  const { list, q } = useLoaderData();
+  const submit = useSubmit();
+
+  useEffect(() => {
+    document.getElementById("search").value = q;
+  }, [q]);
 
   console.log("Location", location);
   console.log("List", list);
@@ -28,8 +34,21 @@ export const ToDo = () => {
   };
 
   return (
-    <div className='flex flex-col md:flex-row h-full'>
+    <div className='flex flex-col md:flex-row h-full bg-slate-50'>
       <div className='flex flex-row gap-4 md:flex-col sm:w-full md:h-full md:w-4/12 xl:w-2/12 md:border-r border-stone-300 p-4'>
+        <Form id='search' role='search'>
+          <input
+            type='search'
+            placeholder='Search To Do'
+            className='bg-none'
+            name='q'
+            defaultValue={q}
+            onChange={(evt) => {
+              const isFirstSearch = q == null;
+              submit(evt.currentTarget.form, { replace: !isFirstSearch });
+            }}
+          />
+        </Form>
         {addToDoNav(list)}
         <NewToDo />
       </div>

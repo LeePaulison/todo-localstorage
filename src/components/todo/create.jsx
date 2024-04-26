@@ -37,7 +37,7 @@ export const Create = () => {
       <div className='card-header'>Edit To Do </div>
       <Form method='post' className='flex flex-col card-body'>
         <label htmlFor='title'>Title</label>
-        <input id='title' type='text' name='title' className='bg-none' />
+        <input id='title' type='text' name='title' className='bg-none' placeholder='Enter To Do Title' />
         <label htmlFor='description'>Description</label>
         <Editor
           editorState={editorState}
@@ -46,6 +46,7 @@ export const Create = () => {
           editorClassName='editor-class'
           toolbarClassName='toolbar-class'
           toolbar={toolbarOptions}
+          placeholder='Enter To Do Description'
         />
         <input type='hidden' name='description' value={draftToHtml(convertToRaw(editorState.getCurrentContent()))} />
         <div className='flex gap-4 justify-end'>
