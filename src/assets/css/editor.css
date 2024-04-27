@@ -18,6 +18,10 @@
   border-radius: 8px;
 }
 
+.editor-class * span {
+  background-color: #fffbeb;
+}
+
 .editor-class * ul {
   list-style: inherit;
   list-style-position: inherit;

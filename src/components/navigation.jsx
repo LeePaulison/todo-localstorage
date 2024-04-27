@@ -4,7 +4,7 @@ export const Navigation = () => {
   let matches = useMatches();
 
   return (
-    <div className='flex flex-row self-start'>
+    <div className='flex flex-row self-start p-4'>
       {matches.map((match, idx) => {
         return (
           <span key={idx}>

@@ -9,19 +9,7 @@ import "../../../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import "../../assets/css/editor.css";
 
 const toolbarOptions = {
-  options: [
-    "inline",
-    "blockType",
-    "fontSize",
-    "fontFamily",
-    "list",
-    "textAlign",
-    "colorPicker",
-    "link",
-    "emoji",
-    "remove",
-    "history",
-  ],
+  options: ["inline", "blockType", "fontSize", "fontFamily", "list", "textAlign", "remove", "history"],
 };
 
 export const Create = () => {

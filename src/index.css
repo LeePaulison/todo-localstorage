@@ -126,7 +126,7 @@
   .card {
     @apply flex;
     @apply flex-col;
-    @apply bg-stone-100;
+    @apply bg-white;
     @apply border;
     @apply border-stone-300;
     @apply rounded-md;
@@ -134,6 +134,8 @@
     @apply w-full;
     @apply max-w-[768px];
     @apply min-h-[200px];
+    @apply max-h-[500px];
+    @apply overflow-hidden;
   }
   .card:not(:last-child) {
     @apply mb-4;
@@ -151,12 +153,17 @@
   .card-body {
     @apply p-4;
     @apply grow;
+    @apply overflow-auto;
   }
   .card-footer {
     @apply p-2;
     @apply bg-stone-200;
     @apply border-t;
     @apply border-stone-300;
+  }
+
+  .card-body * p {
+    @apply mb-4;
   }
 
   .card-body * ul {
@@ -257,6 +264,10 @@ input[type="search"].loading {
 .navSelect .navSelectOption div:hover,
 .navSelect .navSelectOption.active {
   background-color: #f59e0b;
+}
+
+.card-body * span {
+  background-color: rgb(245, 245, 244);
 }
 
 .card-body * ul {

@@ -34,12 +34,12 @@ export const ToDo = () => {
   };
 
   return (
-    <div className='flex flex-col md:flex-row h-full bg-slate-50'>
-      <div className='flex flex-row gap-4 md:flex-col sm:w-full md:h-full md:w-4/12 xl:w-2/12 md:border-r border-stone-300 p-4'>
+    <div className='flex flex-col md:flex-row h-full bg-slate-50 overflow-hidden'>
+      <div className='flex flex-row gap-4 md:flex-col sm:w-full md:h-full md:w-4/12 xl:w-2/12 md:border-r border-stone-300 p-4 overflow-y-auto'>
         <Form id='search' role='search'>
           <input
             type='search'
-            placeholder='Search To Do'
+            placeholder='Search To-dos'
             className='bg-none'
             name='q'
             defaultValue={q}
@@ -52,10 +52,10 @@ export const ToDo = () => {
         {addToDoNav(list)}
         <NewToDo />
       </div>
-      <div className='flex flex-col justify-center items-center w-full p-4'>
+      <div className='flex flex-col justify-center items-center w-full'>
         <Navigation />
-        <div className='grow flex flex-col justify-center items-center w-full'>
-          {location.pathname === "/todolist" ? <ToDoList list={list} /> : <Outlet />}
+        <div className='grow flex flex-col justify-center items-center w-full overflow-hidden'>
+          {location.pathname === "/" ? <ToDoList list={list} /> : <Outlet />}
         </div>
       </div>
     </div>

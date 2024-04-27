@@ -21,14 +21,14 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     loader: allToDoLoader,
     handle: {
-      crumbs: () => "To Do List",
+      crumbs: () => "To-do List",
     },
     children: [
       {
         path: "/create",
         element: <Create />,
         handle: {
-          crumbs: () => "Create ToDo",
+          crumbs: () => "Create To-do",
         },
         action: createToDoAction,
       },
@@ -36,7 +36,7 @@ const router = createBrowserRouter([
         path: "/:todoId/edit",
         element: <Edit />,
         handle: {
-          crumbs: () => "Edit ToDo",
+          crumbs: () => "Edit To-do",
         },
         action: updateToDoAction,
         loader: todoLoader,
@@ -45,7 +45,7 @@ const router = createBrowserRouter([
         path: "/:todoId",
         element: <ToDoItem />,
         handle: {
-          crumbs: () => `ToDo Item`,
+          crumbs: () => `To-do Item`,
         },
         loader: todoLoader,
       },
