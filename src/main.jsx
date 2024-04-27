@@ -10,6 +10,7 @@ import { ToDo } from "./pages/todo";
 import { Create } from "./components/todo/create";
 import { Edit } from "./components/todo/edit";
 import { ToDoItem } from "./components/todo/todoItem";
+import { About } from "./pages/about";
 
 import { allToDoLoader, todoLoader } from "./loaders/loaders";
 import { createToDoAction, updateToDoAction, deleteToDoAction } from "./actions/actions";
@@ -50,6 +51,13 @@ const router = createBrowserRouter([
         loader: todoLoader,
       },
       { path: "/:todoId/destroy", action: deleteToDoAction },
+      {
+        path: "/about",
+        element: <About />,
+        handle: {
+          crumbs: () => "About",
+        },
+      },
     ],
   },
 ]);
