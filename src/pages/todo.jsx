@@ -5,7 +5,7 @@ import { ToDoList } from "../components/todo/todoList";
 import { Navigation } from "../components/navigation";
 
 const NewToDo = () => (
-  <NavLink className='nav-link' to={`/create`}>
+  <NavLink className='nav-link create' to={`/create`}>
     New ToDo
   </NavLink>
 );
@@ -16,9 +16,6 @@ export const ToDo = () => {
   useEffect(() => {
     document.getElementById("search").value = q;
   }, [q]);
-
-  console.log("Location", location);
-  console.log("List", list);
 
   const addToDoNav = (arr = null) => {
     if (arr === null) return;

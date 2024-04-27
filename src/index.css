@@ -124,6 +124,7 @@
     @apply ease-in-out;
   }
   .card {
+    @apply shrink-0;
     @apply flex;
     @apply flex-col;
     @apply bg-white;
@@ -153,6 +154,7 @@
   .card-body {
     @apply p-4;
     @apply grow;
+    @apply max-h-[400px];
     @apply overflow-auto;
   }
 
@@ -187,6 +189,12 @@
     @apply transition-all;
     @apply duration-300;
     @apply ease-in-out;
+  }
+
+  .nav-link.create {
+    @apply bg-amber-600;
+    @apply text-stone-50;
+    @apply hover:bg-amber-700;
   }
 }
 
