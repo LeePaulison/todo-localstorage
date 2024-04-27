@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { Outlet, useLoaderData, NavLink, Form, useSubmit } from "react-router-dom";
 // components
-import { ToDoList } from "../../components/todo/todoList";
-import { Navigation } from "../../components/navigation";
+import { ToDoList } from "../components/todo/todoList";
+import { Navigation } from "../components/navigation";
 
 const NewToDo = () => (
   <NavLink className='nav-link' to={`/create`}>

@@ -155,6 +155,7 @@
     @apply grow;
     @apply overflow-auto;
   }
+
   .card-footer {
     @apply p-2;
     @apply bg-stone-200;

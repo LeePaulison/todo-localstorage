@@ -20,8 +20,8 @@ export const ToDoItem = (props) => {
           </div>
           <div className='card-footer'>
             <div className='flex flex-row justify-end gap-4'>
-              {location.pathname === "/todolist" ? (
-                <NavLink className='nav-link' to={`/todolist/${todo.id}`}>
+              {location.pathname === "/" ? (
+                <NavLink className='nav-link' to={`/${todo.id}`}>
                   View
                 </NavLink>
               ) : (
@@ -31,7 +31,7 @@ export const ToDoItem = (props) => {
                       Edit
                     </button>
                   </Form>
-                  <NavLink className='nav-link' to='/todolist'>
+                  <NavLink className='nav-link' to='/'>
                     Cancel
                   </NavLink>
                   <Form

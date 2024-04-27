@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 // components
 import { ErrorPage } from "./errorpage";
-import { ToDo } from "./pages/projects/todo";
+import { ToDo } from "./pages/todo";
 import { Create } from "./components/todo/create";
 import { Edit } from "./components/todo/edit";
 import { ToDoItem } from "./components/todo/todoItem";
