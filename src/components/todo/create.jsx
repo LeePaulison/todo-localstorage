@@ -21,23 +21,25 @@ export const Create = () => {
   };
 
   return (
-    <div className='card'>
-      <div className='card-header'>Edit To Do </div>
-      <Form method='post' className='flex flex-col card-body'>
-        <label htmlFor='title'>Title</label>
-        <input id='title' type='text' name='title' className='bg-none' placeholder='Enter To Do Title' />
-        <label htmlFor='description'>Description</label>
-        <Editor
-          editorState={editorState}
-          onEditorStateChange={onEditorStateChange}
-          wrapperClassName='wrapper-class'
-          editorClassName='editor-class'
-          toolbarClassName='toolbar-class'
-          toolbar={toolbarOptions}
-          placeholder='Enter To Do Description'
-        />
-        <input type='hidden' name='description' value={draftToHtml(convertToRaw(editorState.getCurrentContent()))} />
-        <div className='flex gap-4 justify-end'>
+    <Form method='post'>
+      <div className='card'>
+        <div className='card-header'>Edit To Do </div>
+        <div className='flex flex-col card-body'>
+          <label htmlFor='title'>Title</label>
+          <input id='title' type='text' name='title' className='bg-none' placeholder='Enter To Do Title' />
+          <label htmlFor='description'>Description</label>
+          <Editor
+            editorState={editorState}
+            onEditorStateChange={onEditorStateChange}
+            wrapperClassName='wrapper-class'
+            editorClassName='editor-class'
+            toolbarClassName='toolbar-class'
+            toolbar={toolbarOptions}
+            placeholder='Enter To Do Description'
+          />
+          <input type='hidden' name='description' value={draftToHtml(convertToRaw(editorState.getCurrentContent()))} />
+        </div>
+        <div className='card-footer flex gap-4 justify-end'>
           <button type='submit' className='btn-submit' role='button'>
             Save
           </button>
@@ -45,7 +47,7 @@ export const Create = () => {
             Cancel
           </button>
         </div>
-      </Form>
-    </div>
+      </div>
+    </Form>
   );
 };

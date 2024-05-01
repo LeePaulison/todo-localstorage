@@ -154,15 +154,21 @@
   .card-body {
     @apply p-4;
     @apply grow;
-    @apply max-h-[400px];
+    @apply max-h-[495px];
     @apply overflow-auto;
   }
 
+  .card-body * span {
+    @apply bg-white;
+  }
+
   .card-footer {
-    @apply p-2;
+    @apply px-4;
+    @apply py-2;
     @apply bg-stone-200;
     @apply border-t;
     @apply border-stone-300;
+    @apply rounded-b-md;
   }
 
   .card-body * p {
@@ -273,10 +279,6 @@ input[type="search"].loading {
 .navSelect .navSelectOption div:hover,
 .navSelect .navSelectOption.active {
   background-color: #f59e0b;
-}
-
-.card-body * span {
-  background-color: rgb(245, 245, 244);
 }
 
 .card-body * ul {
