@@ -30,7 +30,7 @@
     @apply mb-3;
     @apply focus:outline-none;
     @apply focus:border-amber-700;
-    @apply bg-amber-50;
+    @apply bg-white;
   }
   textarea {
     @apply border;
@@ -98,7 +98,7 @@
     @apply border-e-stone-800;
   }
   .btn {
-    @apply bg-amber-600;
+    @apply bg-amber-700;
     @apply text-stone-50;
     @apply font-bold;
     @apply py-2;
@@ -109,7 +109,7 @@
     @apply transition-colors;
     @apply duration-300;
     @apply ease-in-out;
-    @apply hover:bg-amber-700;
+    @apply hover:bg-amber-800;
   }
 
   .btn-submit {
@@ -198,9 +198,9 @@
   }
 
   .nav-link.create {
-    @apply bg-amber-600;
+    @apply bg-amber-700;
     @apply text-stone-50;
-    @apply hover:bg-amber-700;
+    @apply hover:bg-amber-800;
   }
 }
 

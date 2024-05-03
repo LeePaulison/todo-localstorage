@@ -6,7 +6,7 @@ import { Navigation } from "../components/navigation";
 
 const NewToDo = () => (
   <NavLink className='nav-link create' to={`/create`}>
-    New ToDo
+    New To-do
   </NavLink>
 );
 export const ToDo = () => {
