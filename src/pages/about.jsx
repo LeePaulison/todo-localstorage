@@ -21,7 +21,13 @@ export const About = () => {
         (D) aspects of CRUD. The Loaders handle the Read (R) aspect of CRUD.
       </p>
       <h3>GitHub Repository: </h3>
-      <a href='https://github.com/LeePJrAAC/todo-localstorage' className='text-blue-500' id='github-link'>
+      <a
+        href='https://github.com/LeePJrAAC/todo-localstorage'
+        className='text-blue-500'
+        id='github-link'
+        target='_blank'
+        rel='noreferrer noopener'
+      >
         https://github.com/LeePJrAAC/todo-localstorage
       </a>
     </div>
