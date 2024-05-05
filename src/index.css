@@ -285,6 +285,6 @@ input[type="search"].loading {
 .card-body * ul {
 }
 
-.video-player {
-  width: 640px;
+#github-link {
+  padding: 0.5rem 0;
 }

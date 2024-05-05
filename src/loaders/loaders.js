@@ -8,8 +8,6 @@ export async function allToDoLoader({ request }) {
 }
 
 export async function todoLoader({ params }) {
-  console.log("Params", params);
-
   const todo = await getTodoById(params.todoId);
   return { todo };
 }

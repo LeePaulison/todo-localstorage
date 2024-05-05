@@ -15,7 +15,6 @@ const errorCardStyle = {
 
 export function ErrorPage() {
   const error = useRouteError();
-  console.error(error);
 
   return (
     <div id='error-page' style={errorCardStyle}>

@@ -53,7 +53,6 @@ export async function updateToDo(id, updates) {
 
 // delete a todo by id
 export async function deleteToDo(id) {
-  console.log("ID", id);
   let list = await localforage.getItem("list");
   let index = list.findIndex((t) => t.id === id);
   if (index > -1) {
