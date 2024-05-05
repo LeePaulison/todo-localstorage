@@ -65,10 +65,10 @@ export const Edit = () => {
               />
             </div>
             <div className='card-footer flex justify-end gap-4'>
-              <button className='btn' type='submit' role='button'>
+              <button className='btn-submit' type='submit' role='button'>
                 Save
               </button>
-              <button className='btn-submit' role='button' onClick={() => navigate("..", { relative: "path" })}>
+              <button className='btn' role='button' onClick={() => navigate("..", { relative: "path" })}>
                 Cancel
               </button>
             </div>

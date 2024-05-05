@@ -27,7 +27,7 @@ export const ToDoItem = (props) => {
               ) : (
                 <>
                   <Form action='edit'>
-                    <button className='btn' type='submit' role='button'>
+                    <button className='btn-submit' type='submit' role='button'>
                       Edit
                     </button>
                   </Form>
@@ -43,7 +43,7 @@ export const ToDoItem = (props) => {
                       }
                     }}
                   >
-                    <button className='btn-submit' type='submit' role='button'>
+                    <button className='btn' type='submit' role='button'>
                       Delete
                     </button>
                   </Form>

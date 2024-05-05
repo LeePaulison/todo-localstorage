@@ -23,7 +23,7 @@ export const Create = () => {
   return (
     <Form method='post'>
       <div className='card'>
-        <div className='card-header'>Edit To Do </div>
+        <div className='card-header'>Create To Do </div>
         <div className='flex flex-col card-body'>
           <label htmlFor='title'>Title</label>
           <input id='title' type='text' name='title' className='bg-none' placeholder='Enter To Do Title' />
@@ -43,7 +43,7 @@ export const Create = () => {
           <button type='submit' className='btn-submit' role='button'>
             Save
           </button>
-          <button role='button' onClick={() => navigate("..", { relative: "path" })}>
+          <button role='button' className='btn' onClick={() => navigate("..", { relative: "path" })}>
             Cancel
           </button>
         </div>
